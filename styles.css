@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
-/* General Page Styling */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Open Sans', sans-serif;
 }
+
 body {
     background-color: #ffeff5;
     background-image: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
@@ -26,16 +26,38 @@ header {
     background: #222;
     padding: 10px 0;
 }
+
 .navItem a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: block;
-    transition: background 0.3s;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.4);
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.5s ease;
 }
-.navItem a:hover {
-    background: #ffdee9;
-    color: #222;
+
+.navItem {
+    flex-grow: 1;
+}
+
+.navItem:nth-of-type(1) a:hover {
+    background: #D60F3A;
+}
+
+.navItem:nth-of-type(2) a:hover {
+    background: #8317AD;
+}
+
+.navItem:nth-of-type(3) a:hover {
+    background: #3116DE;
+}
+
+.navItem:hover {
+    flex-grow: 3;
 }
 
 /* Layout Styling */
@@ -44,12 +66,14 @@ header {
     justify-content: space-between;
     padding: 20px;
 }
+
 .sidebar, .banner {
     width: 20%;
     background-color: #ffdee9;
     padding: 10px;
     border-radius: 10px;
 }
+
 .content {
     width: 50%;
     background-color: white;
@@ -58,7 +82,7 @@ header {
     position: relative;
 }
 
-/* Images */
+/* Content Image */
 .content img {
     width: 60%;
     border-radius: 10px;
@@ -86,8 +110,8 @@ header {
     border-radius: 5px;
 }
 
-/* Ad and Banner Styling */
-.ad, .rotating-banner {
+/* Rotating Banner */
+.rotating-banner {
     background-color: #f8c8d8;
     padding: 10px;
     margin-top: 10px;
@@ -103,6 +127,7 @@ footer {
     background-color: #4a4a4a;
     padding: 15px;
 }
+
 footer nav a {
     color: #d8a9b1;
     margin: 0 10px;
@@ -115,6 +140,7 @@ footer nav a {
     .container {
         flex-direction: column;
     }
+
     .sidebar, .banner, .content {
         width: 100%;
         margin-bottom: 15px;
