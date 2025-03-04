@@ -13,15 +13,18 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
-showSlide(currentSlide); // Show first slide initially
+setInterval(nextSlide, 3000);
+showSlide(currentSlide);
 
 // Footer Enhancement - Fade In & Dynamic Year
 window.addEventListener('load', () => {
     const footer = document.getElementById('footer');
     const footerYear = document.getElementById('footerYear');
 
-    footer.style.opacity = '1'; // Fade in on load
+    setTimeout(() => {
+        footer.style.opacity = '1';
+    }, 500);
+
     const year = new Date().getFullYear();
     footerYear.textContent = `© ${year} Fashion Trends. All rights reserved.`;
 });
