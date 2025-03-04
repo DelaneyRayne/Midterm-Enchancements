@@ -8,13 +8,13 @@
 
 body {
     background: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
-    text-align: center;
 }
 
 /* Header */
 header {
     background-color: #ffe4ec;
     padding: 15px;
+    text-align: center;
 }
 
 /* Navigation Bar */
@@ -22,7 +22,7 @@ header {
     display: flex;
     background: #222;
 }
-.navItem, .navItem a {
+.navItem a {
     flex-grow: 1;
     text-align: center;
     color: white;
@@ -31,52 +31,41 @@ header {
     transition: all 0.5s ease;
     font-weight: bold;
 }
-.navItem a {
-    text-shadow: 1px 1px 2px rgba(34,34,34,0.4);
+.navItem {
+    flex-grow: 1;
+    transition: flex-grow 0.5s ease;
 }
 .navItem:hover {
     flex-grow: 3;
 }
 
-/* Different colors for each nav item */
+/* Nav colors */
 .navItem:nth-of-type(1) { border-bottom: 2px solid #D60F3A; }
 .navItem:nth-of-type(2) { border-bottom: 2px solid #8317AD; }
 .navItem:nth-of-type(3) { border-bottom: 2px solid #3116DE; }
 .navItem:nth-of-type(4) { border-bottom: 2px solid #0E8FC2; }
 .navItem:nth-of-type(5) { border-bottom: 2px solid #0EC23E; }
 .navItem:nth-of-type(6) { border-bottom: 2px solid #CFCF13; }
-.navItem:nth-of-type(1):hover { background: #D60F3A; }
-.navItem:nth-of-type(2):hover { background: #8317AD; }
-.navItem:nth-of-type(3):hover { background: #3116DE; }
-.navItem:nth-of-type(4):hover { background: #0E8FC2; }
-.navItem:nth-of-type(5):hover { background: #0EC23E; }
-.navItem:nth-of-type(6):hover { background: #CFCF13; }
+.navItem:hover a { background: rgba(255, 255, 255, 0.2); }
 
 /* Layout */
 .container {
     display: flex;
     padding: 20px;
 }
-
 .sidebar, .banner {
     width: 20%;
     background-color: #ffdee9;
     padding: 10px;
-    border-radius: 10px;
 }
-
 .content {
     width: 50%;
-    background-color: white;
     padding: 20px;
-    border-radius: 10px;
 }
-
-.ad img {
+.ad img, .content img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    border-radius: 5px;
 }
 
 /* Slideshow */
@@ -85,7 +74,6 @@ header {
     width: 100%;
     height: 400px;
     overflow: hidden;
-    border-radius: 5px;
 }
 .slide {
     position: absolute;
@@ -93,7 +81,7 @@ header {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.5s ease;
 }
 .slide.active {
     opacity: 1;
@@ -103,9 +91,15 @@ header {
 footer {
     background-color: #4a4a4a;
     padding: 15px;
+    text-align: center;
 }
-footer nav a {
+.footer-nav a {
     color: #d8a9b1;
     margin: 0 10px;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-nav a:hover {
+    color: #fff;
+    transform: scale(1.1);
 }
