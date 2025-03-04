@@ -3,66 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Trends</title>
+    <title>Web Design Enhancement</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>LOGO</h1>
-    <nav class="nav">
-        <div class="navItem"><a href="#">Home</a></div>
-        <div class="navItem"><a href="#">Blogs</a></div>
-        <div class="navItem"><a href="#">About</a></div>
-        <div class="navItem"><a href="#">Lookbook</a></div>
-        <div class="navItem"><a href="#">Quizzes</a></div>
-        <div class="navItem"><a href="#">Contact</a></div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Trends</a></li>
+            <li><a href="#">Inspo</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Tips</a></li>
+        </ul>
     </nav>
 </header>
 
 <div class="container">
-
-    <div class="sidebar">
-        <h2>Trends & Tutorials</h2>
+    <aside class="sidebar">
+        <h2>Explore</h2>
         <ul>
             <li><a href="#">Trends</a></li>
-            <li><a href="#">Inspiration</a></li>
+            <li><a href="#">Inspo</a></li>
             <li><a href="#">Tutorials</a></li>
             <li><a href="#">Tips</a></li>
         </ul>
+    </aside>
+
+    <main class="content">
+        <h1>Welcome to Fashion Hub</h1>
+        <p>Explore the latest trends, inspirations, tutorials, and tips all in one place.</p>
         <div class="ad">
-            <img src="images/photo.ad.jpg" alt="Fashion Advertisement">
+            <img src="photo.ad.jpg" alt="Fashion Ad">
         </div>
-    </div>
+    </main>
 
-    <div class="content">
-        <h2>Fashion Trends</h2>
-        <p>Explore the latest fashion trends, beauty tips, and styling inspiration.</p>
-        <img src="images/imageFash.jpeg" alt="Fashion Trend">
-    </div>
-
-    <div class="banner">
-        <div class="slideshow">
-            <img src="images/image.banner.jpeg" class="slide">
-            <img src="images/imageFash.jpeg" class="slide">
-            <img src="images/photo.ad.jpg" class="slide">
+    <aside class="banner">
+        <h2>Featured</h2>
+        <div class="rotating-banner">
+            <img src="image.banner.jpeg" alt="Fashion Banner">
         </div>
-    </div>
-
+    </aside>
 </div>
 
 <footer>
-    <nav class="footer-nav">
-        <a href="#">Home</a>
-        <a href="#">Lookbook</a>
-        <a href="#">Quizzes</a>
-        <a href="#">Video Tutorials</a>
-        <a href="#">Contact</a>
-        <a href="#">Social Media</a>
+    <nav>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
     </nav>
+    <p class="footer-message">Thanks for visiting!</p>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
