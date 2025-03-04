@@ -1,24 +1,20 @@
-// Slideshow functionality
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const footerMessage = document.querySelector('.footer-message');
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+    // Fade in the message on page load
+    setTimeout(() => {
+        footerMessage.style.opacity = '1';
+    }, 500);
+
+    // Add hover animation to all sidebar links
+    const sidebarLinks = document.querySelectorAll('.sidebar li');
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'translateX(10px)';
+        });
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'translateX(0)';
+        });
     });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 3000);
-showSlide(currentSlide);
-
-// Footer hover effect - Adds dynamic hover class (extra touch)
-const footerLinks = document.querySelectorAll('.footer-nav a');
-footerLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => link.classList.add('hovering'));
-    link.addEventListener('mouseleave', () => link.classList.remove('hovering'));
 });
