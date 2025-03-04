@@ -154,3 +154,9 @@ footer nav a {
 .surprise-btn:hover {
     background-color: #ff3385;
 }
+
+#surprise-content {
+    margin-top: 15px;
+    color: #d6336c; /* Bright pink text */
+    font-size: 18px;
+}
