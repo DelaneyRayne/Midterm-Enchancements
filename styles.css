@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
 * {
     margin: 0;
@@ -6,100 +6,159 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Background pattern */
 body {
     background: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
+    background-color: #ffeff5; /* Light pastel pink */
+    text-align: center;
 }
 
-/* Header */
+/* Header Styling */
 header {
     background-color: #ffe4ec;
     padding: 15px;
-    text-align: center;
 }
 
-/* Navigation Bar */
-.nav {
-    display: flex;
-    background: #222;
-}
-.navItem a {
-    flex-grow: 1;
-    text-align: center;
-    color: white;
+/* Navigation */
+nav a {
+    margin: 0 10px;
+    color: #9b5a67;
     text-decoration: none;
-    padding: 15px;
-    transition: all 0.5s ease;
     font-weight: bold;
 }
-.navItem {
-    flex-grow: 1;
-    transition: flex-grow 0.5s ease;
-}
-.navItem:hover {
-    flex-grow: 3;
-}
-
-/* Nav colors */
-.navItem:nth-of-type(1) { border-bottom: 2px solid #D60F3A; }
-.navItem:nth-of-type(2) { border-bottom: 2px solid #8317AD; }
-.navItem:nth-of-type(3) { border-bottom: 2px solid #3116DE; }
-.navItem:nth-of-type(4) { border-bottom: 2px solid #0E8FC2; }
-.navItem:nth-of-type(5) { border-bottom: 2px solid #0EC23E; }
-.navItem:nth-of-type(6) { border-bottom: 2px solid #CFCF13; }
-.navItem:hover a { background: rgba(255, 255, 255, 0.2); }
 
 /* Layout */
 .container {
     display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
-.sidebar, .banner {
+
+/* Sidebar */
+.sidebar {
     width: 20%;
     background-color: #ffdee9;
     padding: 10px;
-}
-.content {
-    width: 50%;
-    padding: 20px;
-}
-.ad img, .content img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Slideshow */
-.slideshow {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #D60F3A;
 }
-.slide {
-    position: absolute;
+
+/* Sidebar List - Enhanced */
+.sidebar ul {
+    overflow: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    height: 30px;
+    margin: 5px 0;
+    border-bottom: 1px solid #aaa;
+    float: none;
+    padding: 5px 0;
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #555;
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+    text-transform: uppercase;
+    display: block;
+    padding-left: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Sidebar Hover Effect */
+.sidebar li a:hover {
+    color: #fff;
+    background-color: #D60F3A;
+    padding-left: 20px;
+}
+
+/* Active Sidebar Link (Optional for selected page) */
+.sidebar li.active a {
+    font-weight: bold;
+    color: #D60F3A;
+    padding-left: 20px;
+}
+
+/* Ad and Rotating Banner (Make them larger) */
+.ad img, .rotating-banner img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 300px;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1.5s ease;
+    border-radius: 10px;
 }
-.slide.active {
-    opacity: 1;
+
+/* Center Content */
+.content {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Main content image */
+.content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Banner */
+.banner {
+    width: 20%;
+    background-color: #ffdee9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.rotating-banner {
+    background-color: #f8c8d8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 /* Footer */
 footer {
     background-color: #4a4a4a;
     padding: 15px;
-    text-align: center;
 }
-.footer-nav a {
+
+/* Footer Navigation */
+footer nav a {
     color: #d8a9b1;
     margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+    transition: all 0.5s ease;
 }
-.footer-nav a:hover {
-    color: #fff;
-    transform: scale(1.1);
+
+/* Footer Hover Effect */
+footer nav a:hover {
+    color: white;
+    background-color: #D60F3A;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Footer Flex (optional for layout improvement) */
+footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
