@@ -1,3 +1,4 @@
+// Slideshow functionality
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -12,5 +13,12 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 3000);  // Change slide every 3 seconds
-showSlide(currentSlide);       // Initial display
+setInterval(nextSlide, 3000);
+showSlide(currentSlide);
+
+// Footer hover effect - Adds dynamic hover class (extra touch)
+const footerLinks = document.querySelectorAll('.footer-nav a');
+footerLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => link.classList.add('hovering'));
+    link.addEventListener('mouseleave', () => link.classList.remove('hovering'));
+});
