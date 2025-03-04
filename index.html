@@ -4,58 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Trends</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>LOGO</h1>
-    <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">About</a>
-    </nav>
-</header>
+<ul class="nav">
+    <li class="navItem"><a href="#">Home</a></li>
+    <li class="navItem"><a href="#">Lookbook</a></li>
+    <li class="navItem"><a href="#">Quizzes</a></li>
+    <li class="navItem"><a href="#">Video Tutorials</a></li>
+    <li class="navItem"><a href="#">Contact</a></li>
+    <li class="navItem"><a href="#">Social Media</a></li>
+</ul>
 
 <div class="container">
-    <aside class="sidebar">
-        <h2>Trends & Tutorials</h2>
-        <ul class="sidebar-list">
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">Inspiration</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">Tips</a></li>
-        </ul>
-        <div class="ad">
-            <img src="images/photo.ad.jpg" alt="Fashion Advertisement">
-        </div>
-    </aside>
+    <!-- Left Sidebar -->
+    <div class="section sidebar">
+        <h3>Trends & Tutorials</h3>
+        <a href="#">Trends</a>
+        <a href="#">Inspiration</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Tips</a>
+        <img src="images/fashion-ad.jpg" alt="Fashion Advertisement">
+    </div>
 
-    <main class="content">
+    <!-- Main Content -->
+    <div class="section main-content">
         <h2>Fashion Trends</h2>
         <p>Explore the latest fashion trends, beauty tips, and styling inspiration.</p>
-        <img src="images/imageFash.jpeg" alt="Fashion Trend">
+        <img src="images/fashion-trend.jpg" alt="Fashion Trend">
         <p>Stay ahead with modern fashion insights...</p>
-    </main>
+    </div>
 
-    <aside class="banner">
-        <img src="images/image.banner.jpeg" alt="Rotating Banner">
-    </aside>
+    <!-- Right Sidebar / Rotating Banner -->
+    <div class="section ad">
+        <h4>Sponsored</h4>
+        <img src="images/rotating-banner.jpg" alt="Rotating Banner">
+        <button onclick="rotateAd()">Shop Now</button>
+    </div>
 </div>
 
-<footer>
-    <nav class="footer-nav">
-        <a href="#">Home</a>
-        <a href="#">Lookbook</a>
-        <a href="#">Quizzes</a>
-        <a href="#">Video Tutorials</a>
-        <a href="#">Contact</a>
-        <a href="#">Social Media</a>
-    </nav>
-    <p id="footerYear"></p>
-</footer>
+<div class="footer">
+    Home | Lookbook | Quizzes | Video Tutorials | Contact | Social Media
+</div>
 
-<script src="js/script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
