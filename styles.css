@@ -1,24 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
 /* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffeff5; /* Light pastel pink */
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: #ffeff5;
+    background-image: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
 }
 
 /* Header Styling */
 header {
-    background-color: #ffe4ec; /* Soft pink */
+    background-color: #ffe4ec;
     padding: 15px;
+    text-align: center;
 }
 
-/* Navigation Text for "Home, Blogs, About" */
-nav a {
-    margin: 0 10px;
-    color: #9b5a67; /* Darker muted pink */
+/* Modern Flex Navigation */
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 10px 0;
+}
+.navItem a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+.navItem a:hover {
+    background: #ffdee9;
+    color: #222;
 }
 
 /* Layout Styling */
@@ -27,50 +44,55 @@ nav a {
     justify-content: space-between;
     padding: 20px;
 }
-
 .sidebar, .banner {
     width: 20%;
-    background-color: #ffdee9; /* Light pink */
+    background-color: #ffdee9;
     padding: 10px;
     border-radius: 10px;
 }
-
-/* Main Content Area */
 .content {
     width: 50%;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
 }
 
-/* Main Content Images */
+/* Images */
 .content img {
     width: 60%;
     border-radius: 10px;
 }
 
-/* Larger Ad and Banner Images */
-.ad img {
-    width: 100%;
-    height: 400px; 
-    object-fit: cover;
-    border-radius: 5px;
+/* Button Interactivity */
+#surpriseButton {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s;
 }
-
-.rotating-banner img {
-    width: 100%;
-    height: 400px;  
-    object-fit: cover;
-    border-radius: 5px;
+#surpriseButton:hover {
+    transform: scale(1.1);
 }
 
 /* Ad and Banner Containers */
+.ad img, .rotating-banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Ad and Banner Styling */
 .ad, .rotating-banner {
-    background-color: #f8c8d8; /* Pastel pink highlight */
+    background-color: #f8c8d8;
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    height: 420px; 
+    height: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,85 +100,23 @@ nav a {
 
 /* Footer Styling */
 footer {
-    background-color: #4a4a4a; /* Dark gray */
+    background-color: #4a4a4a;
     padding: 15px;
 }
-
-/* Footer Navigation Text */
 footer nav a {
-    color: #d8a9b1; /* Light pastel pink */
+    color: #d8a9b1;
     margin: 0 10px;
     text-decoration: none;
     font-size: 14px;
 }
 
-/* Sidebar Interactive Navigation */
-.sidebar-nav {
-    margin: 20px 0; /* Add some spacing around the menu */
-}
-
-.sidebar-nav ul {
-    overflow: auto;
-    list-style-type: none;
-    padding: 0;
-    background-color: #ffdee9; /* Match sidebar background */
-    border-radius: 5px;
-}
-
-.sidebar-nav li {
-    height: 25px;
-    float: left;
-    width: 100%;
-    margin: 5px 0;
-    padding: 0 20px;
-    border-right: none;
-    border-bottom: 1px solid #aaa; /* Line between items */
-    box-sizing: border-box;
-}
-
-.sidebar-nav li:last-child {
-    border-bottom: none;
-}
-
-.sidebar-nav li a {
-    text-decoration: none;
-    color: #555;
-    font: bold 18px Helvetica, Verdana, sans-serif;
-    text-transform: uppercase;
-    display: block;
-    padding: 5px 0;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.sidebar-nav li a:hover {
-    color: #d6336c; /* Brighter pink on hover */
-}
-
-.sidebar-nav li.active a {
-    font-weight: bold;
-    color: #333;
-}
-
-/* Surprise Trend Button */
-.surprise-btn {
-    background-color: #ff66a3; /* Bright pink button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.surprise-btn:hover {
-    background-color: #ff3385;
-}
-
-#surprise-content {
-    margin-top: 15px;
-    color: #d6336c; /* Bright pink text */
-    font-size: 18px;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .banner, .content {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
