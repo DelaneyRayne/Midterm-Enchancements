@@ -8,77 +8,63 @@
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
-    <h1>LOGO</h1>
-    <ul class="nav">
-        <li class="navItem"><a href="#">Home</a></li>
-        <li class="navItem"><a href="#">Blogs</a></li>
-        <li class="navItem"><a href="#">About</a></li>
-    </ul>
-</header>
+    <!-- Header Section -->
+    <header>
+        <h1>LOGO</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Blogs</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-<!-- Main Content -->
-<div class="container">
+    <!-- Main Content -->
+    <div class="container">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>Trends & Tutorials</h2>
-        <ul>
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">Inspiration</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">Tips</a></li>
-        </ul>
-        <div class="ad">
-            <img src="photo.ad.jpg" alt="Fashion Advertisement">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Trends & Tutorials</h2>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#">Trends</a></li>
+                    <li><a href="#">Inspiration</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Tips</a></li>
+                </ul>
+            </nav>
+            <div class="ad">
+                <img src="photo.ad.jpg" alt="Fashion Advertisement">
+            </div>
         </div>
-    </div>
 
-    <!-- Center Content -->
-    <div class="content">
-        <h2>Fashion Trends</h2>
-        <p>Explore the latest fashion trends, beauty tips, and styling inspiration.</p>
-        <img src="imageFash.jpg" alt="Fashion Trend">
-        <button id="surpriseButton">Click for Surprise Trend!</button>
-        <p id="surpriseText" style="display:none; color:hotpink;">Barbiecore is back in 2025!</p>
-    </div>
-
-    <!-- Right Sidebar -->
-    <div class="banner">
-        <div class="rotating-banner">
-            <img id="bannerImage" src="image.banner.jpeg" alt="Rotating Banner">
+        <!-- Center Content -->
+        <div class="content">
+            <h2>Fashion Trends</h2>
+            <p>Explore the latest fashion trends, beauty tips, and styling inspiration.</p>
+            <img src="imageFash.jpg" alt="Fashion Trend">
+            <button class="surprise-btn">Surprise Trend</button>
         </div>
+
+        <!-- Right Sidebar -->
+        <div class="banner">
+            <div class="rotating-banner">
+                <img src="image.banner.jpeg" alt="Rotating Banner">
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<!-- Footer Section -->
-<footer>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Lookbook</a>
-        <a href="#">Quizzes</a>
-        <a href="#">Video Tutorials</a>
-        <a href="#">Contact</a>
-        <a href="#">Social Media</a>
-    </nav>
-</footer>
-
-<script>
-    // Simple Surprise Trend Interaction
-    document.getElementById('surpriseButton').addEventListener('click', function() {
-        document.getElementById('surpriseText').style.display = 'block';
-    });
-
-    // Rotating Banner (Simulated)
-    const bannerImages = ['image.banner.jpeg'];
-    let currentImage = 0;
-    setInterval(() => {
-        currentImage = (currentImage + 1) % bannerImages.length;
-        document.getElementById('bannerImage').src = bannerImages[currentImage];
-    }, 3000);
-</script>
+    <!-- Footer Section -->
+    <footer>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Lookbook</a>
+            <a href="#">Quizzes</a>
+            <a href="#">Video Tutorials</a>
+            <a href="#">Contact</a>
+            <a href="#">Social Media</a>
+        </nav>
+    </footer>
 
 </body>
 </html>
