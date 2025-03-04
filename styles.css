@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #ffe4ec;
+    padding: 15px;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    background: #222;
+}
+.navItem, .navItem a {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+.navItem a {
+    text-shadow: 1px 1px 2px rgba(34,34,34,0.4);
+}
+.navItem:hover {
+    flex-grow: 3;
+}
+
+/* Different colors for each nav item */
+.navItem:nth-of-type(1) { border-bottom: 2px solid #D60F3A; }
+.navItem:nth-of-type(2) { border-bottom: 2px solid #8317AD; }
+.navItem:nth-of-type(3) { border-bottom: 2px solid #3116DE; }
+.navItem:nth-of-type(4) { border-bottom: 2px solid #0E8FC2; }
+.navItem:nth-of-type(5) { border-bottom: 2px solid #0EC23E; }
+.navItem:nth-of-type(6) { border-bottom: 2px solid #CFCF13; }
+.navItem:nth-of-type(1):hover { background: #D60F3A; }
+.navItem:nth-of-type(2):hover { background: #8317AD; }
+.navItem:nth-of-type(3):hover { background: #3116DE; }
+.navItem:nth-of-type(4):hover { background: #0E8FC2; }
+.navItem:nth-of-type(5):hover { background: #0EC23E; }
+.navItem:nth-of-type(6):hover { background: #CFCF13; }
+
+/* Layout */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar, .banner {
+    width: 20%;
+    background-color: #ffdee9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ad img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #4a4a4a;
+    padding: 15px;
+}
+footer nav a {
+    color: #d8a9b1;
+    margin: 0 10px;
+    text-decoration: none;
+}
