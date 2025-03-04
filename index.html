@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Trends</title>
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -67,20 +68,8 @@
     </nav>
 </footer>
 
-<script>
-    // Simple Surprise Trend Interaction
-    document.getElementById('surpriseButton').addEventListener('click', function() {
-        document.getElementById('surpriseText').style.display = 'block';
-    });
-
-    // Rotating Banner (Simulated)
-    const bannerImages = ['image.banner.jpeg'];
-    let currentImage = 0;
-    setInterval(() => {
-        currentImage = (currentImage + 1) % bannerImages.length;
-        document.getElementById('bannerImage').src = bannerImages[currentImage];
-    }, 3000);
-</script>
+<!-- Link to External JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
