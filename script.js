@@ -7,7 +7,6 @@ const adImages = [
 let currentAdIndex = 0;
 
 function rotateAd() {
-    const adImage = document.querySelector('.ad img');
     currentAdIndex = (currentAdIndex + 1) % adImages.length;
-    adImage.src = adImages[currentAdIndex];
+    document.querySelector('.adImage').src = adImages[currentAdIndex];
 }
