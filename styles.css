@@ -3,31 +3,57 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Background pattern */
+/* Background and general layout */
 body {
     background: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
-    background-color: #ffeff5; /* Light pastel pink */
     text-align: center;
 }
 
-/* Header Styling */
+/* Header - Interactive Nav Bar */
 header {
     background-color: #ffe4ec;
-    padding: 15px;
+    padding: 15px 0;
 }
 
-/* Navigation */
-nav a {
-    margin: 0 10px;
-    color: #9b5a67;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    padding: 0 20px;
+    border-right: 1px solid #aaa;
+    transition: all 0.5s ease;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
     text-decoration: none;
+    color: #9b5a67;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all 0.5s ease;
 }
 
-/* Layout */
+nav li:hover {
+    background-color: #D60F3A;
+}
+
+nav li a:hover {
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Main container */
 .container {
     display: flex;
     justify-content: space-between;
@@ -44,66 +70,43 @@ nav a {
 
 .sidebar h2 {
     font-size: 24px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
     color: #D60F3A;
 }
 
-/* Sidebar List - Enhanced */
 .sidebar ul {
-    overflow: auto;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none;
 }
 
 .sidebar li {
-    height: 30px;
-    margin: 5px 0;
-    border-bottom: 1px solid #aaa;
-    float: none;
-    padding: 5px 0;
-}
-
-.sidebar li:last-child {
-    border-bottom: none;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .sidebar li a {
     text-decoration: none;
     color: #555;
-    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
     text-transform: uppercase;
-    display: block;
-    padding-left: 10px;
-    transition: all 0.4s ease;
-}
-
-/* Sidebar Hover Effect */
-.sidebar li a:hover {
-    color: #fff;
-    background-color: #D60F3A;
-    padding-left: 20px;
-}
-
-/* Active Sidebar Link (Optional for selected page) */
-.sidebar li.active a {
     font-weight: bold;
-    color: #D60F3A;
-    padding-left: 20px;
+    flex: 1;
+    padding-left: 10px;
+    transition: all 0.5s ease;
 }
 
-/* Ad and Rotating Banner (Make them larger) */
-.ad img, .rotating-banner img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+.sidebar li:hover {
+    background-color: #D60F3A;
+    transform: translateX(5px);
 }
 
-/* Center Content */
+.sidebar li a:hover {
+    color: white;
+    padding-left: 15px;
+}
+
+/* Main content */
 .content {
     width: 50%;
     background-color: white;
@@ -111,9 +114,12 @@ nav a {
     border-radius: 10px;
 }
 
-/* Main content image */
-.content img {
+/* Images */
+.ad img, .rotating-banner img {
     width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -125,29 +131,24 @@ nav a {
     border-radius: 10px;
 }
 
-.rotating-banner {
-    background-color: #f8c8d8;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
+.banner h2 {
+    color: #D60F3A;
 }
 
 /* Footer */
 footer {
     background-color: #4a4a4a;
     padding: 15px;
+    color: white;
 }
 
-/* Footer Navigation */
 footer nav a {
     color: #d8a9b1;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 14px;
     transition: all 0.5s ease;
 }
 
-/* Footer Hover Effect */
 footer nav a:hover {
     color: white;
     background-color: #D60F3A;
@@ -155,10 +156,9 @@ footer nav a:hover {
     border-radius: 5px;
 }
 
-/* Footer Flex (optional for layout improvement) */
-footer nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
+.footer-message {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
