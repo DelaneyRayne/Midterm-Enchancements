@@ -1,164 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Background and general layout */
 body {
     background: url(https://subtlepatterns.com/patterns/footer_lodyas.png);
     text-align: center;
 }
 
-/* Header - Interactive Nav Bar */
+/* Header */
 header {
     background-color: #ffe4ec;
-    padding: 15px 0;
+    padding: 15px;
 }
 
-nav ul {
+/* Navigation Bar */
+.nav {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    background: #222;
 }
-
-nav li {
-    padding: 0 20px;
-    border-right: 1px solid #aaa;
-    transition: all 0.5s ease;
-}
-
-nav li:last-child {
-    border-right: none;
-}
-
-nav li a {
-    text-decoration: none;
-    color: #9b5a67;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 18px;
-    transition: all 0.5s ease;
-}
-
-nav li:hover {
-    background-color: #D60F3A;
-}
-
-nav li a:hover {
+.navItem, .navItem a {
+    flex-grow: 1;
+    text-align: center;
     color: white;
-    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 15px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+.navItem:hover {
+    flex-grow: 3;
 }
 
-/* Main container */
+/* Each item gets a border bottom color */
+.navItem:nth-of-type(1) { border-bottom: 2px solid #D60F3A; }
+.navItem:nth-of-type(2) { border-bottom: 2px solid #8317AD; }
+.navItem:nth-of-type(3) { border-bottom: 2px solid #3116DE; }
+.navItem:nth-of-type(4) { border-bottom: 2px solid #0E8FC2; }
+.navItem:nth-of-type(5) { border-bottom: 2px solid #0EC23E; }
+.navItem:nth-of-type(6) { border-bottom: 2px solid #CFCF13; }
+
+/* Container layout */
 .container {
     display: flex;
-    justify-content: space-between;
     padding: 20px;
 }
-
-/* Sidebar */
-.sidebar {
+.sidebar, .banner {
     width: 20%;
-    background-color: #ffdee9;
     padding: 10px;
-    border-radius: 10px;
 }
-
-.sidebar h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #D60F3A;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    height: 35px;
-    display: flex;
-    align-items: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-
-.sidebar li a {
-    text-decoration: none;
-    color: #555;
-    text-transform: uppercase;
-    font-weight: bold;
-    flex: 1;
-    padding-left: 10px;
-    transition: all 0.5s ease;
-}
-
-.sidebar li:hover {
-    background-color: #D60F3A;
-    transform: translateX(5px);
-}
-
-.sidebar li a:hover {
-    color: white;
-    padding-left: 15px;
-}
-
-/* Main content */
 .content {
     width: 50%;
-    background-color: white;
     padding: 20px;
-    border-radius: 10px;
 }
-
-/* Images */
-.ad img, .rotating-banner img {
+.ad img, .content img {
     width: 100%;
     height: auto;
-    max-height: 350px;
+    border-radius: 5px;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
-
-/* Banner */
-.banner {
-    width: 20%;
-    background-color: #ffdee9;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.banner h2 {
-    color: #D60F3A;
+.slide.active {
+    opacity: 1;
 }
 
 /* Footer */
 footer {
     background-color: #4a4a4a;
-    padding: 15px;
     color: white;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
-
 footer nav a {
     color: #d8a9b1;
     margin: 0 10px;
     text-decoration: none;
-    transition: all 0.5s ease;
-}
-
-footer nav a:hover {
-    color: white;
-    background-color: #D60F3A;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.footer-message {
-    margin-top: 10px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
