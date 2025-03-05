@@ -28,20 +28,54 @@ nav a {
     padding: 20px;
 }
 
+.left-sidebar {
+    width: 25%;
+    background-color: #ffdee9; /* Light pink */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.left-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-sidebar li {
+    margin: 10px 0;
+}
+
+.left-sidebar a {
+    text-decoration: none;
+    color: #9b5a67; /* Darker pink */
+}
+
+.left-sidebar a:hover {
+    color: #D60F3A;
+}
+
+/* Main Content */
 .content {
+    width: 40%;
     padding: 20px;
 }
 
 /* Main Content Image */
 .main-img {
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
 }
 
 /* Rotating Banner */
+.rotating-banner {
+    width: 30%;
+    background-color: #f8c8d8; /* Pastel pink highlight */
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .rotating-banner img {
     width: 100%;
-    height: 400px;  
+    height: 400px;
     object-fit: cover;
     border-radius: 5px;
 }
